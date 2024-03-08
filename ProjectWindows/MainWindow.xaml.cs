@@ -49,7 +49,7 @@ namespace ProjectWindows
             else 
             {
                 this.WindowState = WindowState.Maximized;
-                IsMaximized = false;
+                IsMaximized = true;
             }
             
         }
