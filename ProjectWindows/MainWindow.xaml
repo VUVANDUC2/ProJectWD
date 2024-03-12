@@ -1,8 +1,10 @@
-﻿<Window
+﻿<Window x:Class="ProjectWindows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
-        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="ProjectWindows.MainWindow"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d" 
         Height="720" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
@@ -33,14 +35,12 @@
                                 DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30 0 0">
                             <Ellipse>
                                 <Ellipse.Fill>
-                                    <ImageBrush ImageSource="/Images/p1.jpg"/>
+                                    <ImageBrush ImageSource="/Images/p1.jpg" Stretch="Uniform" TileMode="None"/>
                                 </Ellipse.Fill>
                             </Ellipse>
                         </Border>
-                        <TextBlock Text="Silvers Club" Foreground="White" FontSize="22" FontWeight="SemiBold"
+                        <TextBlock Text="Đức Toàn" Foreground="White" FontSize="22" FontWeight="SemiBold"
                                    DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                        <TextBlock Text="Members, France" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
-                                   DockPanel.Dock="Top" TextAlignment="Center" />
                         <!--Menu Sprator-->
                         <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7e5fdc"/>
                         <!--Menu Button-->
@@ -48,25 +48,31 @@
                             <Button Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="DashBoard"/>
+                                    <TextBlock Text="Trang Chính"/>
                                 </StackPanel>
                             </Button>
                             <Button Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="CalendarClock" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Events"/>
+                                    <TextBlock Text="Đăng Bán"/>
                                 </StackPanel>
                             </Button>
                             <Button Style="{StaticResource menuButton}" Background="#7b5cd6" Foreground="White">
                                 <StackPanel Orientation="Horizontal">
-                                    <Icon:PackIconMaterial Kind="AccountMultipleOutline" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Member"/>
+                                    <Icon:PackIconMaterial Kind="Shopping" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Cửa Hàng"/>
                                 </StackPanel>
                             </Button>
                             <Button Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
-                                    <Icon:PackIconMaterial Kind="CashMultiple" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Wallet"/>
+                                    <Icon:PackIconMaterial Kind="ShoppingSearch" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Đơn Hàng"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="InformationOutline" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Trang Cá Nhân"/>
                                 </StackPanel>
                             </Button>
 
@@ -74,7 +80,7 @@
                         <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20">
                             <StackPanel Orientation="Horizontal">
                                 <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Logout"/>
+                                <TextBlock Text="Đăng Xuất"/>
                             </StackPanel>
                         </Button>
                     </DockPanel>
@@ -93,13 +99,12 @@
                 </Grid.RowDefinitions>
                 <!--Search Textbox-->
                 <Grid Width="300" HorizontalAlignment="Left">
-                    <TextBlock Margin="29 10 " VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False"
+                    <TextBlock Margin="20 10 " VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False"
                                Panel.ZIndex="1" Text="Search Here ...."
                                Visibility="{Binding ElementName=txtSearch, Path=Text.IsEmpty,Converter={StaticResource BoolToVis}}"/>
                     <TextBox x:Name="txtSearch" Style="{StaticResource textboxSearch}"/>
                     <Icon:PackIconMaterial Kind="Magnify" Width="20" Height="20" VerticalAlignment="Center"
                                            Margin="0 0 15 0" Foreground="#b0b9c6" HorizontalAlignment="Right"/>
-
 
                 </Grid>
                 <!--Top Buttons-->
@@ -110,38 +115,42 @@
                     <Icon:PackIconMaterial Kind="Bell"/>
                 </Button>
                 <!--Page Tittle-->
-                <TextBlock Text="Member" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
+                <TextBlock Text="Cửa Hàng" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
                            HorizontalAlignment="Left" Foreground="#121518"/>
                 <!--Add Button-->
                 <Button Style="{StaticResource addButton}">
                     <StackPanel Orientation="Horizontal">
                         <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 1 8 0 "/>
-                        <TextBlock Text="Add New Item"/>
+                        <TextBlock Text="Đăng Bán"/>
                     </StackPanel>
                 </Button>
                 <!--Seprator-->
                 <Separator Height="1" Grid.Row="3" Background="#dae2ea" Margin="0 -1 0 10"/>
                 <!--Tab Button-->
                 <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 10 0 0">
-                    <Button Content="Club Staff" Style= "{StaticResource tabButton}" BorderBrush="#784ff2"/>
-                    <Button Content="Players" Style="{StaticResource tabButton}"/>
-                    <Button Content="Archived" Style="{StaticResource tabButton}"/>
+                    <Button Content="Tất Cả" Style= "{StaticResource tabButton}" BorderBrush="#784ff2"/>
+                    <Button Content="Quần Áo" Style= "{StaticResource tabButton}"/>
+                    <Button Content="Đồ Gia Dụng" Style="{StaticResource tabButton}" Width="90"/>
+                    <Button Content="Điện Tử" Style="{StaticResource tabButton}"/>
+                    <Button Content="Thể Thao" Style="{StaticResource tabButton}"/>
+                    <Button Content="Giày Dép" Style="{StaticResource tabButton}"/>
+                    <Button Content="Sách" Style="{StaticResource tabButton}"/>
                 </StackPanel>
                 <!--Counter title-->
-                <TextBlock Text="68 Club Staff" Grid.Row="4" FontSize="18" FontWeight="SemiBold"
+                <TextBlock Text="Mới Đăng Gần Đây" Grid.Row="4" FontSize="18" FontWeight="SemiBold"
                            Foreground="#121518" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Filter by" Grid.Row="4" FontSize="13" FontWeight="SemiBold" Margin="0 0 215 0"
+                <TextBlock Text="Lọc" Grid.Row="4" FontSize="13" FontWeight="SemiBold" Margin="0 0 215 0"
                  Foreground="#121518" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 <!--Filter Textbox-->
                 <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
                     <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False"
-               Panel.ZIndex="1" Text="Search in Members ...."
+               Panel.ZIndex="1" Text="Tìm Kiếm ...."
                Visibility="{Binding ElementName=txtFilter, Path=Text.IsEmpty,Converter={StaticResource BoolToVis}}"/>
                     <TextBox x:Name="txtFilter" Style="{StaticResource textboxSearch}"/>
                 </Grid>
-                <!--Memebers Datagrid-->
+                <!--Items Datagrid-->
                 <DataGrid Grid.Row="5">
-                    
+            
                 </DataGrid>
                 <!--Pagination Section-->
                 <Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4dc" BorderThickness="1"

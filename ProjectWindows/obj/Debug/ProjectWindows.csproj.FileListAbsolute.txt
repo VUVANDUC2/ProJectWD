@@ -20,3 +20,14 @@ D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\ProjectWindows.
 D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\ProjectWindows.exe
 D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\ProjectWindows.pdb
 D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\App.baml
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\Views\LoginView.g.cs
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\ProjectWindows_MarkupCompile.lref
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\CustomControls\BindablePasswordBox.g.cs
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\Views\MainView.g.cs
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\CustomControls\BindablePasswordBox.baml
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\Views\LoginView.baml
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\Views\MainView.baml
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\bin\Debug\MVVMLoginDb.mdf
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\bin\Debug\MVVMLoginDb_log.ldf
+D:\SecondYear\HK2\WinDows\WPF\ProJectWD\ProjectWindows\obj\Debug\ProjectWindows_Content.g.cs
